@@ -1,5 +1,5 @@
 <template>
-  <v-layout>
+  <div>
     <NavigationDrawer v-model="drawer"/>
     <v-app-bar color="blue">
       <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"/>
@@ -7,7 +7,7 @@
       <p> Dummy User Name </p>
       <v-btn> Logout </v-btn>
     </v-app-bar>
-  </v-layout>
+  </div>
 </template>
 
 <script>
