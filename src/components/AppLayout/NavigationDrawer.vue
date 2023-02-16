@@ -1,12 +1,14 @@
 <template>
   <v-navigation-drawer temporary location="left" :model-value="modelValue" @update:modelValue="$emit('update:modelValue', $event)">
     <v-list>
-      <v-list-item v-for="({title , value}) in items" :value="value" :to="value" :title="title" :key="value" @click="navigate(value)"/>
+      <v-list-item v-for="item in items" :value="item.path" :to="item.path" :title="item.title" :key="item.path" @click="close"/>
     </v-list>
   </v-navigation-drawer>
 </template>
 
 <script>
+import {routesToNavigate} from "@/router/routes";
+
 export default {
   props: {
     modelValue: {
@@ -21,26 +23,11 @@ export default {
   },
   computed: {
     items() {
-      return [
-        {
-          title: "One",
-          value: "one",
-        },
-        {
-          title: "Two",
-          value: "two"
-        },
-        {
-          title: "Three",
-          value: "three"
-        }
-      ]
+      return routesToNavigate;
     }
   },
   methods: {
-    // eslint-disable-next-line no-unused-vars
-    navigate(to) {
-      // Navigate logic
+    close() {
       this.$emit("update:modelValue", false);
     }
   }
