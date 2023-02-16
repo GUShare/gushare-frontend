@@ -2,7 +2,7 @@
   <v-toolbar class="mt-12 pt-4">
     <v-tabs v-model="tab" align-tabs="center" grow>
       <v-tab v-for="item in items" :to="item.path" :value="item.path" :key="item.path">
-        {{ item.name }}
+        {{ item.title }}
       </v-tab>
     </v-tabs>
   </v-toolbar>
