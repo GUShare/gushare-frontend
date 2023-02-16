@@ -2,7 +2,7 @@
   <v-app>
     <AppBar></AppBar>
     <NavigationBar class="hidden-sm-and-down" />
-<!--    <router-view></router-view>-->
+    <router-view></router-view>
     <TheFooter />
     <SnackBar />
   </v-app>
@@ -25,7 +25,6 @@ export default {
 
   data() {
     return {
-      drawer: false
     }
   },
 }
