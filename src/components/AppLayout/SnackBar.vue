@@ -1,5 +1,5 @@
 <template>
-  <v-card min-height="50" color="blue" style="width: 100%"></v-card>
+  <div></div>
 </template>
 
 <script>
