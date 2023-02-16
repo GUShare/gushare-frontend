@@ -1,10 +1,15 @@
 <template>
-$END$
+  <v-main>
+    <v-container>
+      <v-alert v-if="false"> Some ALERT!</v-alert>
+      <router-view></router-view>
+    </v-container>
+  </v-main>
 </template>
 
 <script>
 export default {
-name: "LandingView"
+  name: "LandingView"
 }
 </script>
 
