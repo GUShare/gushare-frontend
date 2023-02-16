@@ -1,11 +1,11 @@
 <template>
- <BaseCard title="BuildingView"/>
+  <BaseCard title="RoomView"/>
 </template>
 
 <script>
 import BaseCard from "@/components/card/BaseCard";
 export default {
-  name: "BuildingView",
+  name: "RoomsView",
   components: {BaseCard}
 }
 </script>

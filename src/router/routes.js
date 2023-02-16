@@ -1,9 +1,8 @@
 
 import LoginView from "@/views/LoginView";
 import HomeView from "@/views/HomeView";
-import BuildingView from "@/views/BuildingView";
-import RoomView from "@/views/RoomView";
-import BookingView from "@/views/BookingView";
+import RoomsView from "@/views/RoomsView";
+import BookingsView from "@/views/BookingsView";
 
 const routes = [
     {
@@ -17,20 +16,17 @@ const routes = [
         component: LoginView
     },
     {
-        path: "/building",
-        name: "Building",
-        component: BuildingView
-    },
-    {
         path: "/room",
-        name: "Room",
-        component: RoomView
+        name: "Rooms",
+        component: RoomsView
     },
     {
         path: "/bookings",
         name: "Bookings",
-        component: BookingView
+        component: BookingsView
     }
 ]
+
+export const routesToNavigate = routes.filter((item) => item.name !== "Login");
 
 export default routes;

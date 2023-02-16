@@ -1,14 +1,16 @@
 <template>
   <v-toolbar class="mt-12 pt-4">
     <v-tabs v-model="tab" align-tabs="center" grow>
-      <v-tab v-for="({title, value}) in items" :to="value" :value="value" :key="value">
-        {{ title }}
+      <v-tab v-for="item in items" :to="item.path" :value="item.path" :key="item.path">
+        {{ item.name }}
       </v-tab>
     </v-tabs>
   </v-toolbar>
 </template>
 
 <script>
+import {routesToNavigate} from "@/router/routes";
+
 export default {
   name: "NavigationBar",
   data() {
@@ -18,20 +20,7 @@ export default {
   },
   computed: {
     items() {
-      return [
-        {
-          title: "One",
-          value: "one",
-        },
-        {
-          title: "Two",
-          value: "two"
-        },
-        {
-          title: "Three",
-          value: "three"
-        }
-      ]
+      return routesToNavigate;
     }
   }
 }
