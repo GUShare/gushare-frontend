@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer temporary location="left" :model-value="modelValue">
+  <v-navigation-drawer temporary location="left" :model-value="modelValue" @update:modelValue="$emit('update:modelValue', $event)">
     <v-list>
       <v-list-item v-for="({title , value}) in items" :value="value" :to="value" :title="title" :key="value" @click="navigate(value)"/>
     </v-list>
