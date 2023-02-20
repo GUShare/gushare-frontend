@@ -17,7 +17,9 @@ export class Building {
         this.description = mappedResponse.description;
     }
 
-    toPayload() {
+    #toPayload() {
+        // Method is considered private since
+        // No useage planned for now, but in later releases.
         return {
             id: this.id,
             opening_hours: this.openingHours,
@@ -34,7 +36,9 @@ export class Building {
         }
     }
 
-    clone() {
+    #clone() {
+        // Method is considered private since
+        // No useage planned for now, but in later releases.
         const data = this.toPayload()
         return new Building(data);
     }
