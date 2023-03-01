@@ -3,25 +3,20 @@
     <v-toolbar>
       <v-toolbar-title> Example Content - {{ title }}</v-toolbar-title>
     </v-toolbar>
-    <v-card-text>
-      Lore Impsum ... you know it.
-    </v-card-text>
+    <v-card-text> Lore Impsum ... you know it. </v-card-text>
   </v-card>
 </template>
-
 <script>
 export default {
-  props:{
+  name: "BaseCard",
+  props: {
     title: {
-      required:false,
-      default:"",
-      type:String
+      required: false,
+      default: "",
+      type: String
     }
-  },
-  name: "BaseCard"
-}
+  }
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
