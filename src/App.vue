@@ -7,25 +7,23 @@
     <SnackBar />
   </v-app>
 </template>
-
 <script>
 import NavigationBar from "@/components/AppLayout/NavigationBar";
 import TheFooter from "@/components/AppLayout/TheFooter";
 import SnackBar from "@/components/AppLayout/SnackBar";
 import AppBar from "@/components/AppLayout/AppBar";
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     AppBar,
     SnackBar,
     TheFooter,
-    NavigationBar,
+    NavigationBar
   },
 
   data() {
-    return {
-    }
-  },
-}
+    return {};
+  }
+};
 </script>

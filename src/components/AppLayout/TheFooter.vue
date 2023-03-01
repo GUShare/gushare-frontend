@@ -1,14 +1,20 @@
 <template>
-  <v-footer class="bg-grey-darken-2" min-height="72" style="padding: unset">
+  <v-footer class="bg-grey-darken-2" style="padding: unset">
     <v-row justify="center" no-gutters>
       <v-col class="text-center mt-4" cols="12">
-        <v-chip class="ma-4" v-for="({title, value}) in items" :key="value" :to="value"> {{ title }}</v-chip>
+        <v-chip
+          v-for="{ title, value } in items"
+          :key="value"
+          class="ma-4"
+          :to="value"
+        >
+          {{ title }}</v-chip
+        >
       </v-col>
       <v-col class="text-center mt-4 bg-grey-lighten-1" cols="12">
         {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
       </v-col>
     </v-row>
-
   </v-footer>
 </template>
 
@@ -20,7 +26,7 @@ export default {
       items: [
         {
           title: "One",
-          value: "one",
+          value: "one"
         },
         {
           title: "Two",
@@ -31,11 +37,9 @@ export default {
           value: "three"
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
