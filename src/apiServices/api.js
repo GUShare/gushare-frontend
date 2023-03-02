@@ -30,7 +30,7 @@ export class ApiService {
   async initAxios() {
     this.axiosInstance = axios.create({ baseURL: this.baseUrl });
     applyAuthTokenInterceptor(this.axiosInstance, {
-      requestRefresh: this.tokenRefreshRequest,
+      requestRefresh: this.tokenRefreshRequest.bind(this),
       getStorage: getStore
     });
     await this.setHeader("Accept-Language", this.lang);
