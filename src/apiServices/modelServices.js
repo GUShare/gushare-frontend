@@ -6,8 +6,14 @@ import { Booking } from "@/models/BookingModel";
 import { Building } from "@/models/BuildingModel";
 import { Room } from "@/models/RoomModel";
 import { Workplace } from "@/models/WorkplaceModel";
+import { User } from "@/models/UserModel";
 
 export const bookingEndpointService = Object.assign(crudEndpoint, {
+  BASE_URL: "/users/",
+  MODEL_CLASS: User
+});
+
+export const userEndpointService = Object.assign(crudEndpoint, {
   BASE_URL: "/bookings/",
   MODEL_CLASS: Booking
 });
