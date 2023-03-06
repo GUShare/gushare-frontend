@@ -1,15 +1,12 @@
 <template>
-  <BaseCard title="RoomView"/>
+  <BaseCard title="RoomView" />
 </template>
 
 <script>
 import BaseCard from "@/components/card/BaseCard";
 export default {
   name: "RoomsView",
-  components: {BaseCard}
-}
+  components: { BaseCard }
+};
 </script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
